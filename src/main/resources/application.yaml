@@ -1,0 +1,7 @@
+spring:
+  main:
+    banner-mode: false
+github-api:
+  url: https://api.github.com
+security:
+  API_KEY = ${KEY}
