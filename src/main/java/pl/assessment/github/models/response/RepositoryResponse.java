@@ -1,8 +1,7 @@
-package pl.assesment.github.models.response;
+package pl.assessment.github.models.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-
 
 @Data
 @AllArgsConstructor

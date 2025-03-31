@@ -1,4 +1,4 @@
-package pl.assesment.github.models.response;
+package pl.assessment.github.models.response;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;

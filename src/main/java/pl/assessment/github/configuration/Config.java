@@ -1,4 +1,4 @@
-package pl.assesment.github.configuration;
+package pl.assessment.github.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

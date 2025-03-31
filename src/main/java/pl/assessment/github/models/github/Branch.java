@@ -1,4 +1,4 @@
-package pl.assesment.github.models.entity;
+package pl.assessment.github.models.github;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,5 +8,6 @@ import lombok.Data;
 public class Branch {
 
     private String name;
+
     private String lastCommitSha;
 }

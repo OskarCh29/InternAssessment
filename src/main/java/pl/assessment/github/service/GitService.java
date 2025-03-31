@@ -1,4 +1,4 @@
-package pl.assesment.github.service;
+package pl.assessment.github.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
@@ -6,18 +6,17 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
-import pl.assesment.github.exception.UserNotFoundException;
-import pl.assesment.github.models.entity.Branch;
-import pl.assesment.github.models.entity.GitRepository;
-import pl.assesment.github.models.entity.UserRepositories;
-import pl.assesment.github.models.response.BranchResponse;
-import pl.assesment.github.models.response.RepositoryResponse;
+import pl.assessment.github.exception.UserNotFoundException;
+import pl.assessment.github.models.github.Branch;
+import pl.assessment.github.models.github.GitRepository;
+import pl.assessment.github.models.github.UserRepositories;
+import pl.assessment.github.models.response.BranchResponse;
+import pl.assessment.github.models.response.RepositoryResponse;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-
 
 @Service
 @RequiredArgsConstructor
