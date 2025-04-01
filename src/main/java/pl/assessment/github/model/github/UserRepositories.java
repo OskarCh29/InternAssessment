@@ -1,4 +1,4 @@
-package pl.assessment.github.models.github;
+package pl.assessment.github.model.github;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

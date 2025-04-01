@@ -6,7 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import pl.assessment.github.models.github.UserRepositories;
+import pl.assessment.github.model.github.UserRepositories;
 import pl.assessment.github.service.GitService;
 
 @RestController

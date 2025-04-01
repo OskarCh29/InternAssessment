@@ -7,20 +7,20 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 import pl.assessment.github.exception.UserNotFoundException;
-import pl.assessment.github.models.github.Branch;
-import pl.assessment.github.models.github.GitRepository;
-import pl.assessment.github.models.github.UserRepositories;
-import pl.assessment.github.models.response.BranchResponse;
-import pl.assessment.github.models.response.RepositoryResponse;
+import pl.assessment.github.model.github.Branch;
+import pl.assessment.github.model.github.GitRepository;
+import pl.assessment.github.model.github.UserRepositories;
+import pl.assessment.github.model.response.BranchResponse;
+import pl.assessment.github.model.response.RepositoryResponse;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 @Service
 @RequiredArgsConstructor
 public class GitService {
+
     @Value("${github-api.url}")
     private String url;
 
@@ -47,8 +47,9 @@ public class GitService {
     private List<Branch> getBranches(String username, String repoName) {
         ResponseEntity<BranchResponse[]> response = restTemplate
                 .getForEntity(url + "/repos/" + username + "/" + repoName + "/branches", BranchResponse[].class);
-        Stream<BranchResponse> branchResponse = Arrays.stream(response.getBody());
-        return branchResponse.map(
-                branch -> new Branch(branch.getName(), branch.getCommit().getSha())).collect(Collectors.toList());
+        return Arrays.stream(response.getBody()).map(branch ->
+                new Branch(branch.getName(), branch.getCommit().getSha())).toList();
+
     }
+
 }

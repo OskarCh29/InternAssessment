@@ -1,13 +1,14 @@
-package pl.assessment.github.models.github;
+package pl.assessment.github.model.github;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-@AllArgsConstructor
 @Data
+@AllArgsConstructor
 public class Branch {
 
     private String name;
 
     private String lastCommitSha;
+
 }

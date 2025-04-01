@@ -12,9 +12,8 @@ import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;
-import pl.assessment.github.models.github.UserRepositories;
-import pl.assessment.github.models.response.ErrorResponse;
-import pl.assessment.github.models.response.RepositoryResponse;
+import pl.assessment.github.model.github.UserRepositories;
+import pl.assessment.github.model.response.ErrorResponse;
 import pl.assessment.github.utils.TestUtils;
 
 import static com.github.tomakehurst.wiremock.client.WireMock.*;
